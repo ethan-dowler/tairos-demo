@@ -1,0 +1,18 @@
+.Card {
+  padding: 1rem;
+  border: 1px solid black;
+  width: 10rem;
+  height: 14rem;
+}
+.Card:hover {
+  cursor: pointer;
+}
+.Card-selected {
+  border: 2px solid red;
+}
+.Card-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.Card-body {
+}
