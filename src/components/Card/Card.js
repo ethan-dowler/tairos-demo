@@ -3,14 +3,14 @@ import classNames from 'classnames'
 import AppContext from '../../contexts/AppContext'
 
 const Card = ({ id, title, body }) => {
-  const app = useContext(AppContext)
+  const App = useContext(AppContext)
 
   return (
     <div
       className={classNames('Card', {
-        'Card-selected': app.isSelected(id),
+        'Card-selected': App.isSelected(id),
       })}
-      onClick={app.select}
+      onClick={App.select}
       data-select-id={id}
     >
       <div className="Card-title">{title}</div>
