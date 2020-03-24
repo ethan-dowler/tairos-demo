@@ -1,3 +1,3 @@
-import App from './App'
+import App, { AppContext } from './App'
 import './App.css'
-export default App
+export { App as default, AppContext }
