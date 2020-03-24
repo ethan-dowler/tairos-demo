@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import Card from '../Card'
-import AppContext from '../../contexts/AppContext'
+
+const AppContext = React.createContext({})
 
 class App extends PureComponent {
   state = {
@@ -26,4 +27,4 @@ class App extends PureComponent {
   )
 }
 
-export default App
+export { App as default, AppContext }

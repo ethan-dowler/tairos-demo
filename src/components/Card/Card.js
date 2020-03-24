@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import classNames from 'classnames'
-import AppContext from '../../contexts/AppContext'
+import { AppContext } from '../App'
 
 const Card = ({ id, title, body }) => {
   const App = useContext(AppContext)
