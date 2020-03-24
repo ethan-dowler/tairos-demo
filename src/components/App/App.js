@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react'
-import Card from '../Card'
+import Player from '../Player'
+import Enemy from '../Enemy'
 
 const AppContext = React.createContext({})
 
 class App extends PureComponent {
   state = {
-    selectedElementId: 'block',
+    selectedElementId: 'player-1',
   }
 
   select = e =>
@@ -19,9 +20,20 @@ class App extends PureComponent {
     <AppContext.Provider value={this}>
       <div className="App">
         <h1 className="App-heading">Welcome to Tairos</h1>
-        <Card id={'strike'} title="Strike" body="Deal 3 damage." />
-        <Card id={'block'} title="Block" body="Prevent 2 damage." />
-        <Card id={'grapple'} title="Grapple" body="Stun an enemy." />
+        <p>Coming Soon...</p>
+        <div className="App-content">
+          <div className="App-contentArea App-enemies">
+            <Enemy id="enemy-1" />
+            <Enemy id="enemy-2" />
+            <Enemy id="enemy-3" />
+          </div>
+          <div className="App-contentArea App-players">
+            <Player id="player-1" />
+            <Player id="player-2" />
+            <Player id="player-3" />
+            <Player id="player-4" />
+          </div>
+        </div>
       </div>
     </AppContext.Provider>
   )
