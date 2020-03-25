@@ -1,6 +1,6 @@
 const Ranger = {
   name: 'Ranger',
-  cardTypes: ['Strike', 'Block', 'Grapple'],
+  skills: ['Strike', 'Block', 'Grapple'],
 }
 
 export default Ranger

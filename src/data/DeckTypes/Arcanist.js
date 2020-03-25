@@ -1,6 +1,6 @@
 const Arcanist = {
   name: 'Arcanist',
-  cardTypes: ['Strike', 'Block', 'Grapple'],
+  skills: ['Strike', 'Block', 'Grapple'],
 }
 
 export default Arcanist

@@ -1,6 +1,6 @@
 const Guardian = {
   name: 'Guardian',
-  cardTypes: ['Strike', 'Block', 'Grapple'],
+  skills: ['Strike', 'Block', 'Grapple'],
 }
 
 export default Guardian

@@ -1,6 +1,6 @@
 const Tactician = {
   name: 'Tactician',
-  cardTypes: ['Strike', 'Block', 'Grapple'],
+  skills: ['Strike', 'Block', 'Grapple'],
 }
 
 export default Tactician

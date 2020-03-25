@@ -1,6 +1,6 @@
 const Elementalist = {
   name: 'Elementalist',
-  cardTypes: ['Strike', 'Block', 'Grapple'],
+  skills: ['Strike', 'Block', 'Grapple'],
 }
 
 export default Elementalist
