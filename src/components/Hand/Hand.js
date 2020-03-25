@@ -1,11 +1,11 @@
 import React from 'react'
-import Card from '../Card'
+import Skill from '../Skill'
 
-const Hand = ({ cards }) => {
+const Hand = ({ skillTypes }) => {
   return (
     <div className="Hand">
-      {cards.map(card => (
-        <Card card={card} />
+      {skillTypes.map(type => (
+        <Skill type={type} />
       ))}
     </div>
   )

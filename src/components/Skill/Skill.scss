@@ -1,16 +1,6 @@
-.Card {
+.Skill {
   padding: 1rem;
   border: 1px solid black;
-  width: 10rem;
-  height: 14rem;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &-selected {
-    border: 2px solid red;
-  }
 
   &-title {
     font-weight: bold;
