@@ -1,2 +1,0 @@
-(this.webpackJsonptairos=this.webpackJsonptairos||[]).push([[0],[,,,function(e,t,n){e.exports=n(11)},,,,,function(e,t,n){},function(e,t,n){},function(e,t,n){},function(e,t,n){"use strict";n.r(t);var a=n(0),c=n.n(a),r=n(2),o=n.n(r),i=function(){return c.a.createElement("div",{className:"App"},c.a.createElement("h1",{class:"App-heading"},"Welcome to Tairos"))},s=(n(8),i),u=(n(9),n(10),document.querySelector("[react-app]"));o.a.render(c.a.createElement(c.a.StrictMode,null,c.a.createElement(s,null)),u)}],[[3,1,2]]]);
-//# sourceMappingURL=main.2083bfff.chunk.js.map
