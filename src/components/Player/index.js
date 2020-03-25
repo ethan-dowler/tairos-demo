@@ -1,3 +1,3 @@
 import Player from './Player'
-import './Player.css'
+import './Player.scss'
 export default Player

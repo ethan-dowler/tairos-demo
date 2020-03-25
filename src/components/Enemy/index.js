@@ -1,3 +1,3 @@
 import Enemy from './Enemy'
-import './Enemy.css'
+import './Enemy.scss'
 export default Enemy

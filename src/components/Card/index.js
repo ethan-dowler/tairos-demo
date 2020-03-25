@@ -1,3 +1,3 @@
 import Card from './Card'
-import './Card.css'
+import './Card.scss'
 export default Card

@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App'
 
-import './index.css'
-import './vendor/normalize.css'
+import './index.scss'
+import './vendor/normalize.scss'
 
 const main = document.querySelector('[react-app]')
 

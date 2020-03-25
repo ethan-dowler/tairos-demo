@@ -1,0 +1,30 @@
+.App {
+  &-content {
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas:
+      'enemies'
+      'players';
+
+    &Area > * {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+  &-heading {
+    font-weight: bold;
+  }
+  &-enemies {
+    grid-area: enemies;
+    display: flex;
+  }
+  &-players {
+    grid-area: players;
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      flex-basis: 50%;
+    }
+  }
+}

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import classNames from 'classnames'
 import { AppContext } from '../App'
 
 const Player = ({ id }) => {
