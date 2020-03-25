@@ -9,7 +9,7 @@
 }
 .App-contentArea > * {
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem;
 }
 .App-heading {
   font-weight: bold;
@@ -21,4 +21,8 @@
 .App-players {
   grid-area: players;
   display: flex;
+  flex-wrap: wrap;
+}
+.App-players > * {
+  flex-basis: 50%;
 }
