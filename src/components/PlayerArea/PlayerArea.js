@@ -1,19 +1,22 @@
 import React from 'react'
+import Deck from '../Deck'
 import Hand from '../Hand'
 
-const PlayerArea = ({ id, deckOne, deckTwo, cardsInHand }) => {
+const PlayerArea = ({ name, deckOneType, deckTwoType, skillsInHand }) => {
   return (
     <div className="PlayerArea">
-      <div className="PlayerArea-name">{id}</div>
+      <div className="PlayerArea-name">{name}</div>
 
-      <div className="PlayerArea-area">
-        <div className="PlayerArea-deck PlayerArea-deck--one">{deckOne}</div>
+      <div className="PlayerArea-deck PlayerArea-deck--one">
+        <Deck type={deckOneType} />
+      </div>
 
-        <div className="PlayerArea-deck PlayerArea-deck--two">{deckTwo}</div>
+      <div className="PlayerArea-deck PlayerArea-deck--two">
+        <Deck type={deckTwoType} />
+      </div>
 
-        <div className="PlayerArea-hand">
-          <Hand cards={cardsInHand} />
-        </div>
+      <div className="PlayerArea-hand">
+        <Hand skillTypes={skillsInHand} />
       </div>
     </div>
   )

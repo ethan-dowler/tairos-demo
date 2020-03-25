@@ -1,10 +1,13 @@
 import React from 'react'
+import Enemy from '../Enemy'
 
-const EnemyArea = ({ id, card }) => {
+const EnemyArea = ({ name, type }) => {
   return (
     <div className="EnemyArea">
-      <div className="EnemyArea-name">{id}</div>
-      <div className="EnemyArea-card">{card}</div>
+      <div className="EnemyArea-name">{name}</div>
+      <div className="EnemyArea-card">
+        <Enemy type={type} />
+      </div>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
-import Player from '../Player'
-import Enemy from '../Enemy'
+import EnemyArea from '../EnemyArea'
+import PlayerArea from '../PlayerArea'
 
 const AppContext = React.createContext({})
 
@@ -20,18 +20,41 @@ class App extends PureComponent {
     <AppContext.Provider value={this}>
       <div className="App">
         <h1 className="App-heading">Welcome to Tairos</h1>
+
         <p>Coming Soon...</p>
+
         <div className="App-content">
-          <div className="App-contentArea App-enemies">
-            <Enemy id="enemy-1" />
-            <Enemy id="enemy-2" />
-            <Enemy id="enemy-3" />
+          <div className="App-contentArea App-contentArea--enemies">
+            <EnemyArea name="enemy-1" type="Monster1" />
+            <EnemyArea name="enemy-2" type="Monster1" />
+            <EnemyArea name="enemy-3" type="Monster1" />
           </div>
-          <div className="App-contentArea App-players">
-            <Player id="player-1" />
-            <Player id="player-2" />
-            <Player id="player-3" />
-            <Player id="player-4" />
+
+          <div className="App-contentArea App-contentArea--players">
+            <PlayerArea
+              name="player-1"
+              deckOneType={'Guardian'}
+              deckTwoType={'Tactician'}
+              skillsInHand={['Strike', 'Bolster']}
+            /> 
+            <PlayerArea
+              name="player-2"
+              deckOneType={'Ranger'}
+              deckTwoType={'Elementalist'}
+              skillsInHand={['Hasten', 'Burn']}
+            />
+            <PlayerArea
+              name="player-3"
+              deckOneType={'Arcanist'}
+              deckTwoType={'Shadow'}
+              skillsInHand={['Blast', 'Sneak']}
+            />
+            <PlayerArea
+              name="player-4"
+              deckOneType={'Brawler'}
+              deckTwoType={'Squire'}
+              skillsInHand={['Tackle', 'Resupply']}
+            />
           </div>
         </div>
       </div>

@@ -1,4 +1,8 @@
 .App {
+  &-heading {
+    font-weight: bold;
+  }
+
   &-content {
     border: 1px solid black;
     display: grid;
@@ -6,25 +10,26 @@
       'enemies'
       'players';
 
-    &Area > * {
-      width: 100%;
-      padding: 2rem;
-    }
-  }
-  &-heading {
-    font-weight: bold;
-  }
-  &-enemies {
-    grid-area: enemies;
-    display: flex;
-  }
-  &-players {
-    grid-area: players;
-    display: flex;
-    flex-wrap: wrap;
+    &Area {
+      &--enemies {
+        grid-area: enemies;
+        display: flex;
+      }
 
-    > * {
-      flex-basis: 50%;
+      &--players {
+        grid-area: players;
+        display: flex;
+        flex-wrap: wrap;
+
+        > * {
+          flex-basis: 50%;
+        }
+      }
+
+      > * {
+        width: 100%;
+        padding: 2rem;
+      }
     }
   }
 }
