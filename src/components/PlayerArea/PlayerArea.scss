@@ -1,28 +1,8 @@
 .PlayerArea {
   border: 1px solid blue;
-  display: grid;
-  gap: 1rem;
-  grid-template-areas:
-    'name name'
-    'deck-one deck-two'
-    'hand     hand';
 
   &-name {
-    grid-area: name;
     font-weight: bold;
-  }
-
-  &-deck {
-    &--one {
-      grid-area: deck-one;
-    }
-
-    &--two {
-      grid-area: deck-two;
-    }
-  }
-
-  &-hand {
-    grid-area: hand;
+    margin-bottom: 1rem;
   }
 }
