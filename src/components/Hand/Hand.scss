@@ -1,6 +1,7 @@
 .Hand {
   border: 1px solid blue;
   display: flex;
+  padding: 1rem;
 
   > * {
     flex: 1;
