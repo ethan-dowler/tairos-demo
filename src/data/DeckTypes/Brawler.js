@@ -1,6 +1,6 @@
 const Brawler = {
   name: 'Brawler',
-  skills: ['Strike', 'Block', 'Grapple'],
+  skills: ['Counter', 'Flurry', 'Tackle'],
 }
 
 export default Brawler

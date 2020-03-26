@@ -1,6 +1,6 @@
 const Ranger = {
   name: 'Ranger',
-  skills: ['Strike', 'Block', 'Grapple'],
+  skills: ['Evade', 'Hasten', 'Shoot'],
 }
 
 export default Ranger

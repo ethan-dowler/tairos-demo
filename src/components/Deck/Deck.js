@@ -8,9 +8,7 @@ const Deck = ({ type }) => {
   return (
     <div className="Deck">
       <div className="Deck-name">{data.name}</div>
-      <div className='Deck-skills'>
-        {data.skills.join(",")}
-      </div>
+      <div className="Deck-skills">{data.skills.join(',')}</div>
     </div>
   )
 }

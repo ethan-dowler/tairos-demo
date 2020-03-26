@@ -1,6 +1,6 @@
 const Elementalist = {
   name: 'Elementalist',
-  skills: ['Strike', 'Block', 'Grapple'],
+  skills: ['Burn', 'Freeze', 'Shock'],
 }
 
 export default Elementalist

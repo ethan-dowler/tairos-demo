@@ -36,7 +36,7 @@ class App extends PureComponent {
               deckOneType={'Guardian'}
               deckTwoType={'Tactician'}
               skillsInHand={['Strike', 'Bolster']}
-            /> 
+            />
             <PlayerArea
               name="player-2"
               deckOneType={'Ranger'}

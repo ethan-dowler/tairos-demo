@@ -1,6 +1,6 @@
 const Squire = {
   name: 'Squire',
-  skills: ['Strike', 'Block', 'Grapple'],
+  skills: ['Accompany', 'Fetch', 'Resupply'],
 }
 
 export default Squire

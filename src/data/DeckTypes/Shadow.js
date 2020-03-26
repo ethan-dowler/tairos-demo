@@ -1,6 +1,6 @@
 const Shadow = {
   name: 'Shadow',
-  skills: ['Strike', 'Block', 'Grapple'],
+  skills: ['Mimic', 'Misdirection', 'Sneak'],
 }
 
 export default Shadow

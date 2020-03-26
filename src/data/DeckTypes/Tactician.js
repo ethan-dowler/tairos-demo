@@ -1,6 +1,6 @@
 const Tactician = {
   name: 'Tactician',
-  skills: ['Strike', 'Block', 'Grapple'],
+  skills: ['Bolster', 'Coordinate', 'Inspire'],
 }
 
 export default Tactician
