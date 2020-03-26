@@ -6,47 +6,39 @@ const AppContext = React.createContext({})
 
 class App extends PureComponent {
   state = {
-    selectedElementId: '',
-    player1: {
-      deckOneType: 'Guardian',
-      deckTwoType: 'Tactician',
+    playerOne: {
+      deckOne: { type: 'Guardian', skillsDrawn: [], skillsDiscarded: [] },
+      deckTwo: { type: 'Tactician', skillsDrawn: [], skillsDiscarded: [] },
       skillsInHand: [],
     },
-    player2: {
-      deckOneType: 'Ranger',
-      deckTwoType: 'Elementalist',
+    playerTwo: {
+      deckOne: { type: 'Ranger', skillsDrawn: [], skillsDiscarded: [] },
+      deckTwo: { type: 'Elementalist', skillsDrawn: [], skillsDiscarded: [] },
       skillsInHand: [],
     },
-    player3: {
-      deckOneType: 'Arcanist',
-      deckTwoType: 'Shadow',
+    playerThree: {
+      deckOne: { type: 'Arcanist', skillsDrawn: [], skillsDiscarded: [] },
+      deckTwo: { type: 'Shadow', skillsDrawn: [], skillsDiscarded: [] },
       skillsInHand: [],
     },
-    player4: {
-      deckOneType: 'Brawler',
-      deckTwoType: 'Squire',
+    playerFour: {
+      deckOne: { type: 'Brawler', skillsDrawn: [], skillsDiscarded: [] },
+      deckTwo: { type: 'Squire', skillsDrawn: [], skillsDiscarded: [] },
       skillsInHand: [],
     },
-    enemy1: {
+    enemyOne: {
       type: 'Monster1',
       damageTaken: 0,
     },
-    enemy2: {
+    enemyTwo: {
       type: 'Monster1',
       damageTaken: 0,
     },
-    enemy3: {
+    enemyThree: {
       type: 'Monster1',
       damageTaken: 0,
     },
   }
-
-  select = e =>
-    this.setState({
-      selectedElementId: e.target.closest('[data-select-id]').dataset.selectId,
-    })
-
-  isSelected = id => this.state.selectedElementId === id
 
   render = () => (
     <AppContext.Provider value={this}>
@@ -57,16 +49,16 @@ class App extends PureComponent {
 
         <div className="App-content">
           <div className="App-contentArea App-contentArea--enemies">
-            <EnemyArea name="enemy-1" {...this.state.enemy1} />
-            <EnemyArea name="enemy-2" {...this.state.enemy2} />
-            <EnemyArea name="enemy-3" {...this.state.enemy3} />
+            <EnemyArea name="enemy-one" {...this.state.enemyOne} />
+            <EnemyArea name="enemy-two" {...this.state.enemyTwo} />
+            <EnemyArea name="enemy-three" {...this.state.enemyThree} />
           </div>
 
           <div className="App-contentArea App-contentArea--players">
-            <PlayerArea name="player-1" {...this.state.player1} />
-            <PlayerArea name="player-2" {...this.state.player2} />
-            <PlayerArea name="player-3" {...this.state.player3} />
-            <PlayerArea name="player-4" {...this.state.player4} />
+            <PlayerArea name="player-one" {...this.state.playerOne} />
+            <PlayerArea name="player-two" {...this.state.playerTwo} />
+            <PlayerArea name="player-three" {...this.state.playerThree} />
+            <PlayerArea name="player-four" {...this.state.playerFour} />
           </div>
         </div>
       </div>
