@@ -6,7 +6,39 @@ const AppContext = React.createContext({})
 
 class App extends PureComponent {
   state = {
-    selectedElementId: 'player-1',
+    selectedElementId: '',
+    player1: {
+      deckOneType: 'Guardian',
+      deckTwoType: 'Tactician',
+      skillsInHand: [],
+    },
+    player2: {
+      deckOneType: 'Ranger',
+      deckTwoType: 'Elementalist',
+      skillsInHand: [],
+    },
+    player3: {
+      deckOneType: 'Arcanist',
+      deckTwoType: 'Shadow',
+      skillsInHand: [],
+    },
+    player4: {
+      deckOneType: 'Brawler',
+      deckTwoType: 'Squire',
+      skillsInHand: [],
+    },
+    enemy1: {
+      type: 'Monster1',
+      damageTaken: 0,
+    },
+    enemy2: {
+      type: 'Monster1',
+      damageTaken: 0,
+    },
+    enemy3: {
+      type: 'Monster1',
+      damageTaken: 0,
+    },
   }
 
   select = e =>
@@ -25,36 +57,16 @@ class App extends PureComponent {
 
         <div className="App-content">
           <div className="App-contentArea App-contentArea--enemies">
-            <EnemyArea name="enemy-1" type="Monster1" />
-            <EnemyArea name="enemy-2" type="Monster1" />
-            <EnemyArea name="enemy-3" type="Monster1" />
+            <EnemyArea name="enemy-1" {...this.state.enemy1} />
+            <EnemyArea name="enemy-2" {...this.state.enemy2} />
+            <EnemyArea name="enemy-3" {...this.state.enemy3} />
           </div>
 
           <div className="App-contentArea App-contentArea--players">
-            <PlayerArea
-              name="player-1"
-              deckOneType={'Guardian'}
-              deckTwoType={'Tactician'}
-              skillsInHand={['Strike', 'Bolster']}
-            />
-            <PlayerArea
-              name="player-2"
-              deckOneType={'Ranger'}
-              deckTwoType={'Elementalist'}
-              skillsInHand={['Hasten', 'Burn']}
-            />
-            <PlayerArea
-              name="player-3"
-              deckOneType={'Arcanist'}
-              deckTwoType={'Shadow'}
-              skillsInHand={['Blast', 'Sneak']}
-            />
-            <PlayerArea
-              name="player-4"
-              deckOneType={'Brawler'}
-              deckTwoType={'Squire'}
-              skillsInHand={['Tackle', 'Resupply']}
-            />
+            <PlayerArea name="player-1" {...this.state.player1} />
+            <PlayerArea name="player-2" {...this.state.player2} />
+            <PlayerArea name="player-3" {...this.state.player3} />
+            <PlayerArea name="player-4" {...this.state.player4} />
           </div>
         </div>
       </div>
