@@ -8,7 +8,11 @@ const Skill = ({ type }) => {
   return (
     <div className="Skill">
       <div className="Skill-title">{data.title}</div>
-      <div className="Skill-body">{data.body}</div>
+      <div className="Skill-body">
+        {data.lines.map(line => (
+          <div className="Skill-bodyLine">{line}</div>
+        ))}
+      </div>
     </div>
   )
 }
