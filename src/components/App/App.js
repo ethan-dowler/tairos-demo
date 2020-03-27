@@ -7,23 +7,23 @@ const AppContext = React.createContext({})
 class App extends PureComponent {
   state = {
     playerOne: {
-      deckOne: { type: 'Guardian', skillsDrawn: [], skillsDiscarded: [] },
-      deckTwo: { type: 'Tactician', skillsDrawn: [], skillsDiscarded: [] },
+      deckOneType: 'Guardian',
+      deckTwoType: 'Tactician',
       skillsInHand: [],
     },
     playerTwo: {
-      deckOne: { type: 'Ranger', skillsDrawn: [], skillsDiscarded: [] },
-      deckTwo: { type: 'Elementalist', skillsDrawn: [], skillsDiscarded: [] },
+      deckOneType: 'Ranger',
+      deckTwoType: 'Elementalist',
       skillsInHand: [],
     },
     playerThree: {
-      deckOne: { type: 'Arcanist', skillsDrawn: [], skillsDiscarded: [] },
-      deckTwo: { type: 'Shadow', skillsDrawn: [], skillsDiscarded: [] },
+      deckOneType: 'Arcanist',
+      deckTwoType: 'Shadow',
       skillsInHand: [],
     },
     playerFour: {
-      deckOne: { type: 'Brawler', skillsDrawn: [], skillsDiscarded: [] },
-      deckTwo: { type: 'Squire', skillsDrawn: [], skillsDiscarded: [] },
+      deckOneType: 'Brawler',
+      deckTwoType: 'Squire',
       skillsInHand: [],
     },
     enemyOne: {

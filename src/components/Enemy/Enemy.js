@@ -10,7 +10,6 @@ const Enemy = ({ type, damageTaken = 0 }) => {
       <div className="Enemy-name">{data.name}</div>
       <div className="Enemy-health">Health: {data.health - damageTaken}</div>
       <div className="Enemy-attack">Attack: {data.attack}</div>
-
     </div>
   )
 }

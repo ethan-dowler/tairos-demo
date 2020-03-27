@@ -1,20 +1,34 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import Deck from '../Deck'
-import Hand from '../Hand'
+import Skill from '../Skill'
 
-const Player = ({ deckOne, deckTwo, skillsInHand }) => {
-  return (
+class Player extends PureComponent {
+  state = {
+    skillsInHand: [],
+  }
+
+  onDraw = skill => {
+    if (!skill) return
+
+    let handContents = [...this.state.skillsInHand]
+    handContents.push(skill)
+    this.setState({ skillsInHand: handContents })
+  }
+
+  render = () => (
     <div className="Player">
       <div className="Player-deck Player-deck--one">
-        <Deck {...deckOne} />
+        <Deck type={this.props.deckOneType} onDraw={this.onDraw} />
       </div>
 
       <div className="Player-deck Player-deck--two">
-        <Deck {...deckTwo} />
+        <Deck type={this.props.deckTwoType} onDraw={this.onDraw} />
       </div>
 
       <div className="Player-hand">
-        <Hand skillTypes={skillsInHand} />
+        {this.state.skillsInHand.map(type => (
+          <Skill key={Math.random()} type={type} />
+        ))}
       </div>
     </div>
   )
