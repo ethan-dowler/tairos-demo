@@ -1,6 +1,10 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Evade = {
+  title: '⚡ Evade',
+  lines: [
+    'Prevent 1 damage to you.',
+    '~~ and/or ~~',
+    'Prevent 1 status from being applied to you.',
+  ],
 }
 
-export default Strike
+export default Evade

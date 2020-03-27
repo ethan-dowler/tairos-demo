@@ -1,6 +1,9 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Block = {
+  title: '⚡ Block',
+  lines: [
+    'Prevent up to 2 damage from an enemy attack.',
+    'If you Block a Forced Attacked, you are attacked instead and gain Inspiration.',
+  ],
 }
 
-export default Strike
+export default Block

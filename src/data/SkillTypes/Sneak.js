@@ -1,6 +1,6 @@
 const Sneak = {
   title: 'Sneak',
-  body: 'Deal 5 damage if you were not attacked this turn.',
+  body: 'If you are not engaged with an enemy, deal 6 damage.',
 }
 
 export default Sneak

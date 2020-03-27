@@ -1,6 +1,9 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Shoot = {
+  title: 'Shoot',
+  lines: [
+    'Deal 3 damage.',
+    'If you took no damage this Round, deal 5 damage instead.',
+  ],
 }
 
-export default Strike
+export default Shoot

@@ -1,6 +1,10 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Grapple = {
+  title: 'Grapple',
+  lines: [
+    'Stun an enemy that attacked you this round.',
+    '~~ or ~~',
+    'Stun an enemy that is not engaged with another player.',
+  ],
 }
 
-export default Strike
+export default Grapple

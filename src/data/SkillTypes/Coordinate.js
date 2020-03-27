@@ -1,6 +1,9 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Coordinate = {
+  title: '⚡ Coordinate',
+  lines: [
+    'Play when an ally deals 5 or more damage to deal 5 damage.',
+    'You may target a different enemy.',
+  ],
 }
 
-export default Strike
+export default Coordinate

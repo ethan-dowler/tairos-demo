@@ -1,6 +1,9 @@
 const Strike = {
   title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+  lines: [
+    'Deal 3 damage.',
+    'If you are engaged with the target, deal 5 damage instead.',
+  ],
 }
 
 export default Strike

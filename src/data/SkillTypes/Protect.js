@@ -1,6 +1,10 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Protect = {
+  title: '⚡ Protect',
+  lines: [
+    'Multi-target',
+    'Prevent 1 damage.',
+    'You may discard up to two cards to prevent 3 more damage per card.',
+  ],
 }
 
-export default Strike
+export default Protect

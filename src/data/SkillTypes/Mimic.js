@@ -1,6 +1,8 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Mimic = {
+  title: 'Mimic',
+  lines: [
+    "While this is in your hand, treat it as if it were any card in an ally's hand",
+  ],
 }
 
-export default Strike
+export default Mimic

@@ -1,6 +1,9 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Fetch = {
+  title: 'Fetch',
+  lines: [
+    'Restore 1 Health to each player.',
+    'Each player may place 1 of their discarded cards (other than Fetch) on top of its deck.',
+  ],
 }
 
-export default Strike
+export default Fetch

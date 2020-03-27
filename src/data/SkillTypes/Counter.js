@@ -1,6 +1,9 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Counter = {
+  title: '⚡ Counter',
+  lines: [
+    'Play when you are attacked to deal 2 damage to your attacker and draw a card.',
+    'If this damage defeats them, they deal no damage.',
+  ],
 }
 
-export default Strike
+export default Counter

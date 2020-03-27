@@ -1,6 +1,9 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Unleash = {
+  title: 'Unleash',
+  lines: [
+    'Multi-target',
+    'Deal 2 damage. You may discard up to 2 cards to deal 3 more damage per card.',
+  ],
 }
 
-export default Strike
+export default Unleash

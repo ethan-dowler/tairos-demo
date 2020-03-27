@@ -1,6 +1,10 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Flurry = {
+  title: 'Flurry',
+  lines: [
+    'Multi-target',
+    'Deal 1 damage.',
+    'Mill up to 5 cards to deal 1 more damage per card.',
+  ],
 }
 
-export default Strike
+export default Flurry

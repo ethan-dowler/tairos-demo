@@ -1,6 +1,6 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Inspire = {
+  title: 'Inspire',
+  lines: ['All players draw a card and gain Inspiration.'],
 }
 
-export default Strike
+export default Inspire

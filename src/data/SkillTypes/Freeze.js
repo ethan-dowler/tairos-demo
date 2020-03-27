@@ -1,6 +1,9 @@
-const Strike = {
-  title: 'Strike',
-  body: 'Deal 3 damage. If ... deal 5 instead.',
+const Freeze = {
+  title: 'Freeze',
+  lines: [
+    'Deal 3 damage and Chill the target.',
+    'If the target is already Chilled, Stun them instead.',
+  ],
 }
 
-export default Strike
+export default Freeze
