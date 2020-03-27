@@ -1,6 +1,12 @@
 .Skill {
   padding: 1rem;
   border: 1px solid black;
+  min-width: 10rem;
+  overflow-y: scroll;
+
+  &-play {
+    margin-bottom: 1rem;
+  }
 
   &-title {
     font-weight: bold;
@@ -8,5 +14,8 @@
   }
 
   &-body {
+    &Line {
+      margin-bottom: 1rem;
+    }
   }
 }

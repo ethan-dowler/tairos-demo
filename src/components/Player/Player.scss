@@ -19,7 +19,7 @@
     grid-area: hand;
     border: 1px solid blue;
     display: flex;
-    padding: 1rem;
+    overflow-x: scroll;
 
     > * {
       flex: 1;

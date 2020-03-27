@@ -15,6 +15,16 @@ class Player extends PureComponent {
     this.setState({ skillsInHand: handContents })
   }
 
+  onPlay = e => {
+    if (!e.target.name) return console.log('Put a name on the Play button!')
+
+    let skill = e.target.name
+    let handContents = [...this.state.skillsInHand]
+    let indexOfSkill = handContents.indexOf(skill)
+    handContents.splice(indexOfSkill, 1)
+    this.setState({ skillsInHand: handContents })
+  }
+
   render = () => (
     <div className="Player">
       <div className="Player-deck Player-deck--one">
@@ -26,8 +36,8 @@ class Player extends PureComponent {
       </div>
 
       <div className="Player-hand">
-        {this.state.skillsInHand.map(type => (
-          <Skill key={Math.random()} type={type} />
+        {this.state.skillsInHand.sort().map(type => (
+          <Skill key={Math.random()} type={type} onPlay={this.onPlay} />
         ))}
       </div>
     </div>
