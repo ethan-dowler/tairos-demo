@@ -13,8 +13,6 @@ class Deck extends PureComponent {
       ...this.deckData.skills,
       ...this.deckData.skills,
     ]),
-    skillsDrawn: [],
-    skillsDiscarded: [],
   }
 
   drawSkill = () => {
@@ -39,9 +37,6 @@ class Deck extends PureComponent {
         <div className="Deck-counters">
           <div className="Deck-deckSize">
             Deck: {this.state.skillsInDeck.length}
-          </div>
-          <div className="Deck-discardSize">
-            Discard: {this.state.skillsDiscarded.length}
           </div>
           <button onClick={this.drawSkill}>Draw</button>
         </div>
