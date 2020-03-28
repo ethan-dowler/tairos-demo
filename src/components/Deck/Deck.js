@@ -3,12 +3,13 @@ import * as DeckTypes from '../../data/DeckTypes'
 import shuffle from '../../util/shuffle'
 import tally from '../../util/tally'
 
-const DrawPile = ({ skills, numberOfCards, onDraw }) => (
+const DrawPile = ({ skills, numberOfCards, onDraw, onMill }) => (
   <Fragment>
     <div className="Deck-skills">{skills.join(', ')}</div>
-    <div className="Deck-counters">
-      <div className="Deck-drawPileSize">Deck: {numberOfCards}</div>
-      {numberOfCards && <button onClick={onDraw}>Draw</button>}
+    <div className="Deck-drawPileSize">Deck: {numberOfCards}</div>
+    <div className="Deck-actions">
+      {!!numberOfCards && <button onClick={onDraw}>Draw</button>}
+      {!!numberOfCards && <button onClick={onMill}>Mill</button>}
     </div>
   </Fragment>
 )
@@ -46,16 +47,28 @@ class Deck extends PureComponent {
     drawMode: true,
   }
 
-  drawSkill = () => {
+  removeTopSkill = () => {
     let deckContents = [...this.state.skillsInDeck]
     if (!deckContents.length) return
 
     let skill = deckContents.shift()
     this.setState({ skillsInDeck: deckContents })
+    return skill
+  }
+
+  drawSkill = () => {
+    let skill = this.removeTopSkill()
     this.props.onDraw(skill)
   }
 
+  millSkill = () => {
+    let skill = this.removeTopSkill()
+    this.props.onMill(skill)
+  }
+
   fetchSkill = skill => {
+    if (!skill) return
+
     let deckContents = [...this.state.skillsInDeck]
     deckContents.unshift(skill)
     this.setState({ skillsInDeck: deckContents })
@@ -84,6 +97,7 @@ class Deck extends PureComponent {
             skills={this.deckData.skills}
             numberOfCards={this.state.skillsInDeck.length}
             onDraw={this.drawSkill}
+            onMill={this.millSkill}
           />
         ) : (
           <DiscardPile

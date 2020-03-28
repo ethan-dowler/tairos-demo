@@ -41,12 +41,14 @@ class Player extends PureComponent {
 
   onDraw = skill => this.addToHand(skill)
 
+  onMill = skill => this.addToDiscard(skill)
+
+  onFetch = skill => this.removeFromDiscard(skill)
+
   onPlay = skill => {
     this.removeFromHand(skill)
     this.addToDiscard(skill)
   }
-
-  onFetch = skill => this.removeFromDiscard(skill)
 
   takeDamage = number => {
     let newDamageTaken = this.state.damageTaken + number
@@ -69,6 +71,7 @@ class Player extends PureComponent {
             type={this.props.deckOneType}
             skillsInDiscard={this.state.skillsInDiscard}
             onDraw={this.onDraw}
+            onMill={this.onMill}
             onFetch={this.onFetch}
           />
         </div>
@@ -78,6 +81,7 @@ class Player extends PureComponent {
             type={this.props.deckTwoType}
             skillsInDiscard={this.state.skillsInDiscard}
             onDraw={this.onDraw}
+            onMill={this.onMill}
             onFetch={this.onFetch}
           />
         </div>

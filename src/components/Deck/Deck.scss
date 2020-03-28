@@ -19,4 +19,9 @@
     color: forestgreen;
     margin-bottom: 1rem;
   }
+
+  &-actions {
+    display: flex;
+    justify-content: space-between;
+  }
 }
