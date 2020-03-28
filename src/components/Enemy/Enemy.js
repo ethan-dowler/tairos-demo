@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import * as EnemyTypes from '../../data/EnemyTypes'
+import HealthModifier from '../HealthModifier'
 
 class Enemy extends PureComponent {
   enemyData = EnemyTypes[this.props.type]
@@ -16,11 +17,6 @@ class Enemy extends PureComponent {
     this.setState({ damageTaken: newDamageTaken })
   }
 
-  onDamage = e => {
-    let amount = parseInt(e.target.dataset.amount)
-    this.takeDamage(amount)
-  }
-
   render = () => (
     <div className="Enemy">
       <div className="Enemy-name">{this.enemyData.name}</div>
@@ -30,27 +26,7 @@ class Enemy extends PureComponent {
         </div>
         <div className="Enemy-attack">Attack: {this.enemyData.attack}</div>
       </div>
-      <div className="">Modify Health</div>
-      <div className="Enemy-actions">
-        <button onClick={this.onDamage} data-amount={-5}>
-          +5
-        </button>
-        <button onClick={this.onDamage} data-amount={-3}>
-          +3
-        </button>
-        <button onClick={this.onDamage} data-amount={-1}>
-          +1
-        </button>
-        <button onClick={this.onDamage} data-amount={1}>
-          -1
-        </button>
-        <button onClick={this.onDamage} data-amount={3}>
-          -3
-        </button>
-        <button onClick={this.onDamage} data-amount={5}>
-          -5
-        </button>
-      </div>
+      <HealthModifier takeDamage={this.takeDamage} />
     </div>
   )
 }

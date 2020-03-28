@@ -1,9 +1,14 @@
 import React, { PureComponent } from 'react'
 import Deck from '../Deck'
 import Skill from '../Skill'
+import StatusBar from '../StatusBar'
+import HealthModifier from '../HealthModifier'
 
 class Player extends PureComponent {
+  maxHealth = 16
+
   state = {
+    damageTaken: 0,
     skillsInHand: [],
     skillsInDiscard: [],
   }
@@ -43,30 +48,45 @@ class Player extends PureComponent {
 
   onFetch = skill => this.removeFromDiscard(skill)
 
+  takeDamage = number => {
+    let newDamageTaken = this.state.damageTaken + number
+    if (newDamageTaken > this.maxHealth) newDamageTaken = this.maxHealth
+
+    this.setState({ damageTaken: newDamageTaken })
+  }
+
   render = () => (
     <div className="Player">
-      <div className="Player-deck Player-deck--one">
-        <Deck
-          type={this.props.deckOneType}
-          skillsInDiscard={this.state.skillsInDiscard}
-          onDraw={this.onDraw}
-          onFetch={this.onFetch}
-        />
+      <div className="Player-health">
+        Health: {this.maxHealth - this.state.damageTaken}
       </div>
+      <StatusBar />
+      <HealthModifier takeDamage={this.takeDamage} />
 
-      <div className="Player-deck Player-deck--two">
-        <Deck
-          type={this.props.deckTwoType}
-          skillsInDiscard={this.state.skillsInDiscard}
-          onDraw={this.onDraw}
-          onFetch={this.onFetch}
-        />
-      </div>
+      <div className="Player-cards">
+        <div className="Player-deck Player-deck--one">
+          <Deck
+            type={this.props.deckOneType}
+            skillsInDiscard={this.state.skillsInDiscard}
+            onDraw={this.onDraw}
+            onFetch={this.onFetch}
+          />
+        </div>
 
-      <div className="Player-hand">
-        {this.state.skillsInHand.sort().map(type => (
-          <Skill type={type} onPlay={this.onPlay} key={Math.random()} />
-        ))}
+        <div className="Player-deck Player-deck--two">
+          <Deck
+            type={this.props.deckTwoType}
+            skillsInDiscard={this.state.skillsInDiscard}
+            onDraw={this.onDraw}
+            onFetch={this.onFetch}
+          />
+        </div>
+
+        <div className="Player-hand">
+          {this.state.skillsInHand.sort().map(type => (
+            <Skill type={type} onPlay={this.onPlay} key={Math.random()} />
+          ))}
+        </div>
       </div>
     </div>
   )

@@ -1,9 +1,15 @@
 .Player {
-  display: grid;
-  gap: 1rem;
-  grid-template-areas:
-    'deck-one deck-two'
-    'hand     hand';
+  &-health {
+    margin-bottom: 1rem;
+  }
+
+  &-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+      'deck-one deck-two'
+      'hand     hand';
+  }
 
   &-deck {
     &--one {

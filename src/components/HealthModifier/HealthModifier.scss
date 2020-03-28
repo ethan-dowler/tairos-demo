@@ -1,0 +1,17 @@
+.HealthModifier {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    margin-bottom: 0.5rem;
+  }
+
+  &-buttons {
+    display: flex;
+  }
+
+  &-button {
+    flex: 1;
+  }
+}
