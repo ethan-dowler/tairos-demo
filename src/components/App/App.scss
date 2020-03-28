@@ -1,4 +1,12 @@
 .App {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  &.wide-mode {
+    max-width: 100rem;
+  }
+
   &-heading {
     font-weight: bold;
   }
@@ -23,6 +31,10 @@
 
         > * {
           flex-basis: 50%;
+
+          .wide-mode & {
+            flex-basis: 25%;
+          }
         }
       }
 

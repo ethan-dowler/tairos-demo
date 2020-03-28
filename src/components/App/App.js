@@ -6,59 +6,48 @@ const AppContext = React.createContext({})
 
 class App extends PureComponent {
   state = {
-    playerOne: {
-      deckOneType: 'Guardian',
-      deckTwoType: 'Tactician',
-      skillsInHand: [],
-    },
-    playerTwo: {
-      deckOneType: 'Ranger',
-      deckTwoType: 'Elementalist',
-      skillsInHand: [],
-    },
-    playerThree: {
-      deckOneType: 'Arcanist',
-      deckTwoType: 'Shadow',
-      skillsInHand: [],
-    },
-    playerFour: {
-      deckOneType: 'Brawler',
-      deckTwoType: 'Squire',
-      skillsInHand: [],
-    },
-    enemyOne: {
-      type: 'Monster1',
-      damageTaken: 0,
-    },
-    enemyTwo: {
-      type: 'Monster1',
-      damageTaken: 0,
-    },
-    enemyThree: {
-      type: 'Monster1',
-      damageTaken: 0,
-    },
+    wideMode: false,
+  }
+
+  toggleWideMode = () => {
+    this.setState({ wideMode: !this.state.wideMode })
   }
 
   render = () => (
     <AppContext.Provider value={this}>
-      <div className="App">
+      <div className={`App ${this.state.wideMode ? 'wide-mode' : ''}`}>
         <h1 className="App-heading">Welcome to Tairos</h1>
 
-        <p>Coming Soon...</p>
+        <button onClick={this.toggleWideMode}>Toggle Wide Mode</button>
 
         <div className="App-content">
           <div className="App-contentArea App-contentArea--enemies">
-            <EnemyArea name="enemy-one" {...this.state.enemyOne} />
-            <EnemyArea name="enemy-two" {...this.state.enemyTwo} />
-            <EnemyArea name="enemy-three" {...this.state.enemyThree} />
+            <EnemyArea name="Enemy" type="Monster1" />
+            <EnemyArea name="Enemy" type="Monster1" />
+            <EnemyArea name="Enemy" type="Monster1" />
           </div>
 
           <div className="App-contentArea App-contentArea--players">
-            <PlayerArea name="player-one" {...this.state.playerOne} />
-            <PlayerArea name="player-two" {...this.state.playerTwo} />
-            <PlayerArea name="player-three" {...this.state.playerThree} />
-            <PlayerArea name="player-four" {...this.state.playerFour} />
+            <PlayerArea
+              name="Red"
+              deckOneType="Guardian"
+              deckTwoType="Tactician"
+            />
+            <PlayerArea
+              name="Blue"
+              deckOneType="Ranger"
+              deckTwoType="Elementalist"
+            />
+            <PlayerArea
+              name="Green"
+              deckOneType="Arcanist"
+              deckTwoType="Shadow"
+            />
+            <PlayerArea
+              name="Yellow"
+              deckOneType="Brawler"
+              deckTwoType="Squire"
+            />
           </div>
         </div>
       </div>
