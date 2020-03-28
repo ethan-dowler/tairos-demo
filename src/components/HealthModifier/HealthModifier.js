@@ -18,6 +18,7 @@ const HealthModifier = ({ takeDamage }) => {
             className="HealthModifier-button"
             onClick={handleClick}
             data-amount={amount}
+            key={Math.random()}
           >
             {amount < 0 && '+'}
             {amount * -1}
