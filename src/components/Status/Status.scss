@@ -1,0 +1,11 @@
+.Status {
+  margin-right: 1rem;
+
+  &-label {
+    margin-left: 0.5rem;
+  }
+
+  input[type='number'] {
+    width: 2rem;
+  }
+}
