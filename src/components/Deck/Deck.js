@@ -15,14 +15,20 @@ const DrawPile = ({ skills, numberOfCards, onDraw }) => (
 
 const DiscardPile = ({ skills, skillsInDiscard, onFetch }) => (
   <Fragment>
-    {skills.map(skill => (
-      <div className="Deck-discardCount" key={Math.random()}>
-        {skill}: {tally(skillsInDiscard, skill)}{' '}
-        <button name={skill} onClick={onFetch}>
-          Fetch
-        </button>
-      </div>
-    ))}
+    {skills.map(skill => {
+      let numberInDiscard = tally(skillsInDiscard, skill)
+
+      return (
+        <div className="Deck-discardCount" key={Math.random()}>
+          {skill}: {numberInDiscard}{' '}
+          {!!numberInDiscard && (
+            <button name={skill} onClick={onFetch}>
+              Fetch
+            </button>
+          )}
+        </div>
+      )
+    })}
   </Fragment>
 )
 
