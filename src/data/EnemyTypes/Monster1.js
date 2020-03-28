@@ -1,6 +1,6 @@
 const Monster1 = {
   name: 'Monster 1',
-  health: 20,
+  maxHealth: 20,
   attack: 4,
 }
 

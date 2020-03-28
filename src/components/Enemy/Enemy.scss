@@ -2,8 +2,20 @@
   padding: 1rem;
   border: 1px solid black;
 
+  &-stats {
+    margin-bottom: 1rem;
+  }
+
   &-name {
     font-weight: bold;
     margin-bottom: 1rem;
+  }
+
+  &-actions {
+    display: flex;
+
+    > * {
+      flex: 1;
+    }
   }
 }
