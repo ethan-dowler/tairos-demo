@@ -4,17 +4,19 @@
 
   &-name {
     font-weight: bold;
+    margin-bottom: 0.5rem;
   }
 
   &-skills {
     font-style: italic;
   }
 
-  &-deckSize {
-    color: forestgreen;
+  &-modeToggle {
+    margin-bottom: 1rem;
   }
 
-  &-discardSize {
-    color: maroon;
+  &-drawPileSize {
+    color: forestgreen;
+    margin-bottom: 1rem;
   }
 }

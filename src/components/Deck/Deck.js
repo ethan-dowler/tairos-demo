@@ -5,9 +5,9 @@ import tally from '../../util/tally'
 
 const DrawPile = ({ skills, numberOfCards, onDraw }) => (
   <Fragment>
-    <div className="Deck-skills">{skills.join(',')}</div>
+    <div className="Deck-skills">{skills.join(', ')}</div>
     <div className="Deck-counters">
-      <div className="Deck-deckSize">Deck: {numberOfCards}</div>
+      <div className="Deck-drawPileSize">Deck: {numberOfCards}</div>
       {numberOfCards && <button onClick={onDraw}>Draw</button>}
     </div>
   </Fragment>
@@ -56,7 +56,6 @@ class Deck extends PureComponent {
   }
 
   fetchSkill = skill => {
-    console.log('fetching skill', skill)
     let deckContents = [...this.state.skillsInDeck]
     deckContents.unshift(skill)
     this.setState({ skillsInDeck: deckContents })
@@ -76,12 +75,10 @@ class Deck extends PureComponent {
 
     return (
       <div className="Deck">
-        <div>
-          <div className="Deck-name">{this.deckData.name}</div>
-          <button onClick={this.toggleDrawMode}>
-            View {this.state.drawMode ? 'Discard' : 'Deck'}
-          </button>
-        </div>
+        <div className="Deck-name">{this.deckData.name}</div>
+        <button className="Deck-modeToggle" onClick={this.toggleDrawMode}>
+          View {this.state.drawMode ? 'Discard' : 'Deck'}
+        </button>
         {this.state.drawMode ? (
           <DrawPile
             skills={this.deckData.skills}
