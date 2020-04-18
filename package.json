@@ -2,7 +2,7 @@
   "name": "tairos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ethan-dowler.github.io/tairos",
+  "homepage": "https://ethan-dowler.github.io/tairos-demo",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
